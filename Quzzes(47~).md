@@ -30,3 +30,17 @@ Array_1 = Array([1,3,5,10,0])
 
 Array_1.get(1)
 ```
+```py
+class Stack:
+    def __init__(self):
+        self.stack = []
+    def push(self, item):
+        self.stack.append(item)
+    def pop(self):
+        result = self.stack[-1] 
+        del self.stack[-1]  
+        return result
+
+```
+
+
