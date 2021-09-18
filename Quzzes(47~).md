@@ -30,6 +30,12 @@ Array_1 = Array([1,3,5,10,0])
 
 Array_1.get(1)
 ```
+*create a class of queue*
+```py
+
+```
+
+*create a class of stack*
 ```py
 class Stack:
     def __init__(self):
