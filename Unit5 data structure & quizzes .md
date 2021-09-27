@@ -153,6 +153,24 @@ class get_average(MyQueue):
  ### testing (incomplete)
  ![Screen Shot 2021-09-18 at 13 04 35](https://user-images.githubusercontent.com/60457723/133871921-2e261001-8e90-4459-a541-f926f9d6a102.png)
 
+## collection 
+
+```.py
+class MyCollection:
+    def __init__ (self, current_index):
+        self.current_index :int = current_index
+        self.collection :list = []
+    
+    def addItem (self, item):
+        self.collection.append(item)
+        print(f"one item is added : {self.item}")
+        
+    def isEmpty (self):
+        if self.collection:
+            print("collection is not empty")
+        else:
+            print("collection is empty")
+```
 
 ## Quiz 49
 *Inputs:10 Ib scores(1-7) from the user*
