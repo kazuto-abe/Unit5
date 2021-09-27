@@ -163,3 +163,58 @@ class get_average(MyQueue):
 ```
 
 ### testing 
+
+
+## GA activitiy 9/27
+
+```.py
+import random
+from random import randint
+
+
+import matplotlib.pyplot as plt
+
+class MyQueue:
+    def __init__(self):
+        self.queue: list = []
+
+    def enqueue(self, item):
+        self.queue.append(item)
+
+    def dequeue(self):
+        length = len(self.queue)
+        if length == 0:
+            print("queue is empty")
+            return None
+        else:
+            data = self.queue[0]
+            del self.queue[0]
+            return data
+
+    def is_empty(self):
+        return len(self.queue) == 0
+
+
+# random.seed(1234)
+
+route = MyQueue()
+cities = "ABCDEFGHIJKLMNOPQRST"
+print(f"number of cities is {len(cities)}")
+
+map_cities = [{'name': c, 'x': randint(0, 300), 'y': randint(0, 300)} for c in cities]
+
+for city in map_cities:
+    route.enqueue(city)
+
+while not route.is_empty():
+    city = route.dequeue()
+    print(f"{city['name']} is located at {city['x']}, {city['x']}")
+    x = city['x']
+    y = city['y']
+    plt.xlabel("X coordinate")
+    plt.ylabel("Y coordinate")
+    plt.scatter(x, y)
+
+plt.show()
+
+```
