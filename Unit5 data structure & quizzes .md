@@ -236,3 +236,51 @@ while not route.is_empty():
 plt.show()
 
 ```
+
+## Linked list
+
+```.py
+
+class Single_Linkedlist:
+    class MyNode:
+        def __init__ (self, data, next=None, previous=None):
+            self.data = data
+            self.next = next
+            self.previous = previous 
+    
+        def __repr__ (self):
+            return f"Node : <MyNode>"
+    
+    def __init__(self, data):
+        self.head = None
+        if data is not None:
+            node = Single_Linkedlist.MyNode(data = data)
+            self.head = node
+    
+    def add_left(self, data):
+        node = Single_Linkedlist.MyNode(data = data)
+        if self.head is not None:
+            node.next = self.head
+            self.head = node
+        else:
+            self.head = node
+            
+    def add_right(self, data):
+        node = Single_LinkedList.MyNode(data = data)
+        current_node = self.head
+        while current_node != None:
+            current_node = node.next
+        current_node.next = node
+        
+    def insert (self, data):
+        
+    
+    
+           
+List_1 = Single_Linkedlist("node 1")
+List_1.add_left("node 2")
+List_1.add_left("node 3")
+print(List_1)
+
+
+```
