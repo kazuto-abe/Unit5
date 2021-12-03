@@ -284,3 +284,27 @@ print(List_1)
 
 
 ```
+## The thing
+
+```.py
+coins = [5,5,5,4,5,6,5,4,4,5,5,5,5,5,4,6]
+def counterfeit(coins):
+    length = len(coins)
+    if length == 1:
+        basecase = coins[0]
+        return basecase
+    
+    else:
+        mid = int(length/2)
+        left_half = counterfeit(coins[:mid])
+        right_half = conterfeit(coins[mid:])
+        
+        case_1 = left_half < right_half
+        if case_1 == True:
+            return left__half
+        else:
+            return right_half
+    
+test = conterfeit(coins)
+print(test)
+```
